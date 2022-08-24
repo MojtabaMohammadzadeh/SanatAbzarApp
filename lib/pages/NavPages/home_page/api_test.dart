@@ -28,13 +28,13 @@ class _ApiTestState extends State<ApiTest> {
     return BlocBuilder<HomeBloc, HomeState>
       (builder:(context, state){
         if( state.homestatus is HomeLoading){
-          return Container(child: Text('Loading...'),);
+          return Container(child: Text('Loading...',style: TextStyle(fontSize: 32,fontWeight: FontWeight.w700),),);
           }
         if( state.homestatus is HomeCompleted){
-          return Container(child: Text('completed..'),);
+          return Container(child: Text('completed..',style: TextStyle(fontSize: 32,fontWeight: FontWeight.w700),),);
         }
         if( state.homestatus is HomeError){
-          return Container(child: Text('error...'),);
+          return Container(child: Text('error...',style: TextStyle(fontSize: 32,fontWeight: FontWeight.w700),),);
         }
         return Container();
     });

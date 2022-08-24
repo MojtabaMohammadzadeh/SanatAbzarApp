@@ -17,11 +17,14 @@ class HomePageReopIml extends HomePageRepository{
   Future<DataState<FirstPageEntities>> fetchHomePageData() async {
 
     try{
-
       Response response = await apiProvider.callFirstPage();
       if(response.statusCode== 200){
+
+        print('Start');
         FirstPageEntities firstPageEntities = FirstPageModel.fromJson(response.data);
+        print('Done');
         return DataSuccess(firstPageEntities);
+
       }else{
         return DataFailed('Something went wrong. please try again');
       }

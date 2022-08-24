@@ -7,6 +7,7 @@ class ApiProvider {
   final Dio _dio =Dio();
 
  Future<dynamic> callFirstPage() async {
+
     var response=await _dio.get(Constants.myUrl);
 
     return response;

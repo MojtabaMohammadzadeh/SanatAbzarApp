@@ -4,7 +4,7 @@
 
 class Constants{
 
-  static const myUrl = "http://localhost/abzarapi/v1/";
+  static const myUrl = "https://jsonplaceholder.typicode.com/todos/";
 
 
 }

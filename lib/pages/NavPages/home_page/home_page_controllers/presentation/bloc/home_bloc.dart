@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 import 'package:untitled/pages/NavPages/home_page/home_page_controllers/presentation/bloc/home_satus.dart';
 import 'package:untitled/pages/core/resources/data_state.dart';
@@ -15,7 +16,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc(this.homepageUseCase) : super(HomeState(homestatus: HomeLoading())) {
     on<LoadHomePage>((event, emit) async {
       // TODO: implement event handler
-      emit(state.copyWith(newHomeStatus: HomeLoading()));
+      // emit(state.copyWith(newHomeStatus: HomeLoading()));
       DataState dataState = await homepageUseCase();
 
       if (dataState == DataSuccess){
